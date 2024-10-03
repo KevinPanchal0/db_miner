@@ -1,9 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:db_miner/models/quotes_model_api.dart';
-import 'package:db_miner/models/quotes_model_json.dart';
-import 'package:db_miner/utils/helpers/db_helper.dart';
-import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 
 class ApiHelper {
@@ -12,8 +9,9 @@ class ApiHelper {
   static final ApiHelper apiHelper = ApiHelper._();
 
   Future<List<QuotesModelApi>?> fetchQuotesApi() async {
+    String favQsApi = 'https://favqs.com/api/quotes';
     final response = await http.get(
-      Uri.parse('https://favqs.com/api/quotes'),
+      Uri.parse(favQsApi),
       headers: {
         'Authorization': 'Token token=401de41444261d62ab909d51e2ed9064',
       },
