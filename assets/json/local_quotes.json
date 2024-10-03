@@ -1,0 +1,214 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "quote": "The only way to do great work is to love what you do.",
+      "author": "Steve Jobs",
+      "category": "Motivation",
+      "fav": 0
+    },
+    {
+      "id": 2,
+      "quote": "In the middle of every difficulty lies opportunity.",
+      "author": "Albert Einstein",
+      "category": "Inspiration",
+      "fav": 0
+    },
+    {
+      "id": 3,
+      "quote": "Life is what happens when you're busy making other plans.",
+      "author": "John Lennon",
+      "category": "Life",
+      "fav": 0
+    },
+    {
+      "id": 4,
+      "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+      "author": "Winston Churchill",
+      "category": "Success",
+      "fav": 0
+    },
+    {
+      "id": 5,
+      "quote": "Don't watch the clock; do what it does. Keep going.",
+      "author": "Sam Levenson",
+      "category": "Motivation",
+      "fav": 0
+    },
+    {
+      "id": 6,
+      "quote": "Believe you can and you're halfway there.",
+      "author": "Theodore Roosevelt",
+      "category": "Belief",
+      "fav": 0
+    },
+    {
+      "id": 7,
+      "quote": "Happiness is not something ready-made. It comes from your own actions.",
+      "author": "Dalai Lama",
+      "category": "Happiness",
+      "fav": 0
+    },
+    {
+      "id": 8,
+      "quote": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+      "author": "Zig Ziglar",
+      "category": "Achievement",
+      "fav": 0
+    },
+    {
+      "id": 9,
+      "quote": "It is our choices that show what we truly are, far more than our abilities.",
+      "author": "J.K. Rowling",
+      "category": "Choice",
+      "fav": 0
+    },
+    {
+      "id": 10,
+      "quote": "The best way to predict the future is to invent it.",
+      "author": "Alan Kay",
+      "category": "Future",
+      "fav": 0
+    },
+    {
+      "id": 11,
+      "quote": "Success is how high you bounce when you hit bottom.",
+      "author": "George S. Patton",
+      "category": "Success",
+      "fav": 0
+    },
+    {
+      "id": 12,
+      "quote": "Failure is simply the opportunity to begin again, this time more intelligently.",
+      "author": "Henry Ford",
+      "category": "Failure",
+      "fav": 0
+    },
+    {
+      "id": 13,
+      "quote": "The secret of getting ahead is getting started.",
+      "author": "Mark Twain",
+      "category": "Motivation",
+      "fav": 0
+    },
+    {
+      "id": 14,
+      "quote": "You miss 100% of the shots you don’t take.",
+      "author": "Wayne Gretzky",
+      "category": "Courage",
+      "fav": 0
+    },
+    {
+      "id": 15,
+      "quote": "Hardships often prepare ordinary people for an extraordinary destiny.",
+      "author": "C.S. Lewis",
+      "category": "Perseverance",
+      "fav": 0
+    },
+    {
+      "id": 16,
+      "quote": "Do what you can, with what you have, where you are.",
+      "author": "Theodore Roosevelt",
+      "category": "Action",
+      "fav": 0
+    },
+    {
+      "id": 17,
+      "quote": "I have not failed. I've just found 10,000 ways that won’t work.",
+      "author": "Thomas Edison",
+      "category": "Perseverance",
+      "fav": 0
+    },
+    {
+      "id": 18,
+      "quote": "The journey of a thousand miles begins with one step.",
+      "author": "Lao Tzu",
+      "category": "Journey",
+      "fav": 0
+    },
+    {
+      "id": 19,
+      "quote": "Success usually comes to those who are too busy to be looking for it.",
+      "author": "Henry David Thoreau",
+      "category": "Success",
+      "fav": 0
+    },
+    {
+      "id": 20,
+      "quote": "It’s not whether you get knocked down, it’s whether you get up.",
+      "author": "Vince Lombardi",
+      "category": "Resilience",
+      "fav": 0
+    },
+    {
+      "id": 21,
+      "quote": "You must be the change you wish to see in the world.",
+      "author": "Mahatma Gandhi",
+      "category": "Change",
+      "fav": 0
+    },
+    {
+      "id": 22,
+      "quote": "Tough times never last, but tough people do.",
+      "author": "Robert H. Schuller",
+      "category": "Perseverance",
+      "fav": 0
+    },
+    {
+      "id": 23,
+      "quote": "Act as if what you do makes a difference. It does.",
+      "author": "William James",
+      "category": "Action",
+      "fav": 0
+    },
+    {
+      "id": 24,
+      "quote": "Success is not how much money you have, but how many lives you have impacted.",
+      "author": "Unknown",
+      "category": "Success",
+      "fav": 0
+    },
+    {
+      "id": 25,
+      "quote": "Opportunities don't happen, you create them.",
+      "author": "Chris Grosser",
+      "category": "Opportunity",
+      "fav": 0
+    },
+    {
+      "id": 26,
+      "quote": "Don't be afraid to give up the good to go for the great.",
+      "author": "John D. Rockefeller",
+      "category": "Courage",
+      "fav": 0
+    },
+    {
+      "id": 27,
+      "quote": "We become what we think about.",
+      "author": "Earl Nightingale",
+      "category": "Mindset",
+      "fav": 0
+    },
+    {
+      "id": 28,
+      "quote": "Don't let yesterday take up too much of today.",
+      "author": "Will Rogers",
+      "category": "Focus",
+      "fav": 0
+    },
+    {
+      "id": 29,
+      "quote": "If you are not willing to risk the usual, you will have to settle for the ordinary.",
+      "author": "Jim Rohn",
+      "category": "Risk",
+      "fav": 0
+    },
+    {
+      "id": 30,
+      "quote": "The best revenge is massive success.",
+      "author": "Frank Sinatra",
+      "category": "Success",
+      "fav": 0
+    }
+  ]
+}
