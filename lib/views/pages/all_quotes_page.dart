@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:db_miner/utils/constanst/image_list_constant.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +51,7 @@ class _AllQuotesPageState extends State<AllQuotesPage>
                         alignment: Alignment.center,
                         children: [
                           ColorFiltered(
-                            colorFilter: ColorFilter.mode(
+                            colorFilter: const ColorFilter.mode(
                                 Colors.black54, BlendMode.color),
                             child: Image.asset(
                               predefinedImageList[i],
@@ -87,23 +85,23 @@ class _AllQuotesPageState extends State<AllQuotesPage>
                                     ),
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Text(
                                   textAlign: TextAlign.center,
                                   quotes[i].quote,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 25, color: Colors.white),
                                 ),
                                 Text(
                                   '- ${quotes[i].author}',
                                   textAlign: TextAlign.right,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 20, color: Colors.white),
                                 ),
                                 Text(
                                   '- ${quotes[i].category}',
                                   textAlign: TextAlign.right,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 20, color: Colors.white),
                                 ),
                               ],
