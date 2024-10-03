@@ -19,7 +19,7 @@ class DbHelper {
       path,
       version: 1,
       onCreate: (database, version) async {
-        String query = """
+        String queryQuotes = """
         CREATE TABLE IF NOT EXISTS quotes(
 quote_id INTEGER PRIMARY KEY AUTOINCREMENT, 
 quote TEXT NOT NULL, 
@@ -29,7 +29,14 @@ fav INTEGER DEFAULT 0
         ); 
         """;
 
-        await database.execute(query);
+        String queryFav = """
+        CREATE TABLE IF NOT EXISTS quotes(
+fav INTEGER PRIMARY KEY, 
+        ); 
+        """;
+
+        await database.execute(queryQuotes);
+        await database.execute(queryFav);
 
         log('=================');
         log('Success');
