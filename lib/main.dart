@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:db_miner/views/pages/home_page.dart';
 import 'package:db_miner/views/pages/intro_page.dart';
 import 'package:flutter/material.dart';

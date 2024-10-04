@@ -29,7 +29,6 @@ class _IntroPageState extends State<IntroPage> {
   void initState() {
     super.initState();
 
-    checkPrefs();
     loadDB();
   }
 
@@ -51,8 +50,9 @@ class _IntroPageState extends State<IntroPage> {
                 shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16))),
               ),
-              onPressed: () {
-                Get.toNamed('/');
+              onPressed: () async {
+                await checkPrefs();
+                Get.offAllNamed('/');
               },
               label: const Text('Get Started'),
             ),

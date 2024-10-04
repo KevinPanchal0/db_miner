@@ -30,9 +30,8 @@ fav INTEGER DEFAULT 0
         """;
 
         String queryFav = """
-        CREATE TABLE IF NOT EXISTS quotes(
-fav INTEGER PRIMARY KEY, 
-        ); 
+        CREATE TABLE IF NOT EXISTS fav(
+fav INTEGER PRIMARY KEY); 
         """;
 
         await database.execute(queryQuotes);

@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import '../../models/quotes_model_json.dart';
 import '../../utils/helpers/db_helper.dart';
 
-class AllQuotesPage extends StatefulWidget {
-  const AllQuotesPage({super.key});
+class OfflineQuotesPage extends StatefulWidget {
+  const OfflineQuotesPage({super.key});
 
   @override
-  State<AllQuotesPage> createState() => _AllQuotesPageState();
+  State<OfflineQuotesPage> createState() => _OfflineQuotesPageState();
 }
 
-class _AllQuotesPageState extends State<AllQuotesPage>
+class _OfflineQuotesPageState extends State<OfflineQuotesPage>
     with AutomaticKeepAliveClientMixin {
   @override
   bool get wantKeepAlive => true;
