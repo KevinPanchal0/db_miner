@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:db_miner/models/favorite_quote_model.dart';
 import 'package:db_miner/models/quotes_model_json.dart';
 import 'package:flutter/services.dart';
 import 'package:path/path.dart';
@@ -30,8 +31,12 @@ fav INTEGER DEFAULT 0
         """;
 
         String queryFav = """
-        CREATE TABLE IF NOT EXISTS fav(
-fav INTEGER PRIMARY KEY); 
+        CREATE TABLE IF NOT EXISTS favQuotes(
+quote_id INTEGER, 
+quote TEXT NOT NULL, 
+author TEXT NOT NULL,
+category TEXT
+        ); 
         """;
 
         await database.execute(queryQuotes);
@@ -87,5 +92,39 @@ fav INTEGER PRIMARY KEY);
         allRecords.map((e) => QuotesModelJson.fromMap(data: e)).toList();
 
     return quotesModel;
+  }
+
+  Future<List<FavoriteQuoteModel>> fetchFav() async {
+    await initDB();
+    String query = 'SELECT * FROM favQuotes;';
+    List<Map<String, dynamic>> allRecords = await database!.rawQuery(query);
+
+    List<FavoriteQuoteModel> quotesModel =
+        allRecords.map((e) => FavoriteQuoteModel.fromMap(map: e)).toList();
+    print(quotesModel);
+    return quotesModel;
+  }
+
+  Future<int> addFav({required FavoriteQuoteModel favModel}) async {
+    await initDB();
+    String query =
+        'INSERT INTO favQuotes(quote_id, quote, author, category) VALUES(?, ?, ?, ?);';
+    List args = [
+      favModel.id,
+      favModel.quote,
+      favModel.author,
+      favModel.category
+    ];
+
+    int res = await database!.rawInsert(query, args);
+    fetchFav();
+    return res;
+  }
+
+  clearAllFav() async {
+    await initDB();
+    String query = 'DELETE FROM favQuotes;';
+
+    await database!.rawDelete(query);
   }
 }

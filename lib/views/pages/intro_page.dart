@@ -28,8 +28,6 @@ class _IntroPageState extends State<IntroPage> {
   @override
   void initState() {
     super.initState();
-
-    loadDB();
   }
 
   @override
@@ -51,6 +49,7 @@ class _IntroPageState extends State<IntroPage> {
                     borderRadius: BorderRadius.circular(16))),
               ),
               onPressed: () async {
+                await loadDB();
                 await checkPrefs();
                 Get.offAllNamed('/');
               },

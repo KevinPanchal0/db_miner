@@ -1,7 +1,9 @@
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:db_miner/controllers/connectivity_controller.dart';
+import 'package:db_miner/models/favorite_quote_model.dart';
 import 'package:db_miner/models/quotes_model_api.dart';
 import 'package:db_miner/utils/helpers/api_helper.dart';
+import 'package:db_miner/utils/helpers/db_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -44,7 +46,7 @@ class _OnlineQuotesPageState extends State<OnlineQuotesPage>
         });
       },
       child: SingleChildScrollView(
-        physics: AlwaysScrollableScrollPhysics(),
+        physics: const AlwaysScrollableScrollPhysics(),
         child: Column(
           children: [
             (connectivityController.connectivityModal.isNetworkAvailable ==
@@ -77,13 +79,14 @@ class _OnlineQuotesPageState extends State<OnlineQuotesPage>
                       } else if (snapshot.hasData) {
                         List<QuotesModelApi>? quotes = snapshot.data;
 
+                        List random = ['random'];
                         return (quotes!.isEmpty)
                             ? const Center(
                                 child: Text('No Quotes, Pull to refresh'),
                               )
                             : Center(
                                 child: SizedBox(
-                                  height: 650,
+                                  height: 700,
                                   width: 400,
                                   child: AppinioSwiper(
                                     controller: controller,
@@ -133,7 +136,29 @@ class _OnlineQuotesPageState extends State<OnlineQuotesPage>
                                                       ),
                                                     ),
                                                     IconButton.filled(
-                                                      onPressed: () {},
+                                                      onPressed: () async {
+                                                        FavoriteQuoteModel
+                                                            favModel =
+                                                            FavoriteQuoteModel(
+                                                          id: quotes[i].quoteId,
+                                                          quote:
+                                                              quotes[i].quote,
+                                                          author:
+                                                              quotes[i].author,
+                                                          category: (quotes[i]
+                                                                  .category
+                                                                  .isEmpty)
+                                                              ? random[0]
+                                                              : quotes[i]
+                                                                  .category[0],
+                                                        );
+                                                        int res = await DbHelper
+                                                            .dbHelper
+                                                            .addFav(
+                                                                favModel:
+                                                                    favModel);
+                                                        print(res);
+                                                      },
                                                       icon: const Icon(
                                                         Icons
                                                             .favorite_border_outlined,

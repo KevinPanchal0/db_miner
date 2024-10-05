@@ -65,25 +65,12 @@ class _OfflineQuotesPageState extends State<OfflineQuotesPage>
                               crossAxisAlignment: CrossAxisAlignment.end,
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    IconButton.filled(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.more_vert,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    IconButton.filled(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.favorite_border_outlined,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ],
+                                IconButton.filled(
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.more_vert,
+                                    color: Colors.white,
+                                  ),
                                 ),
                                 const Spacer(),
                                 Text(

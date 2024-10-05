@@ -23,13 +23,13 @@ class _HomePageState extends State<HomePage> {
       Get.put(ConnectivityController());
   loadDB() async {
     await DbHelper.dbHelper.initDB();
-    connectivityController.checkConnectivity();
   }
 
   @override
   void initState() {
     super.initState();
     loadDB();
+    connectivityController.checkConnectivity();
   }
 
   @override
@@ -44,10 +44,9 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             onPressed: () {
               showModalBottomSheet(
+                showDragHandle: true,
                 context: context,
-                builder: (context) => Container(
-                  height: 500,
-                ),
+                builder: (context) => Container(),
               );
             },
             icon: const Icon(Icons.settings_outlined),

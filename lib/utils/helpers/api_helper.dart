@@ -32,4 +32,26 @@ class ApiHelper {
       return quotesModal;
     }
   }
+
+  Future<Map<String, dynamic>> fetchSingleQuotesApi({required int id}) async {
+    String favQsApi = 'https://favqs.com/api/quotes/$id';
+    final response = await http.get(
+      Uri.parse(favQsApi),
+      headers: {
+        'Authorization': 'Token token=401de41444261d62ab909d51e2ed9064',
+      },
+    );
+
+    if (response.statusCode == 200) {
+      var data = jsonDecode(response.body);
+
+      Map<String, dynamic> quotesList = await data;
+
+      return quotesList;
+    } else {
+      log('Failed to fetch quotes: ${response.statusCode}');
+      Map<String, dynamic> quotesModal = {};
+      return quotesModal['error'];
+    }
+  }
 }
