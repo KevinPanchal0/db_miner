@@ -33,7 +33,7 @@ class _OfflineQuotesPageState extends State<OfflineQuotesPage>
             child: Column(
               children: [
                 SizedBox(
-                  height: 700,
+                  height: 600,
                   width: 400,
                   child: AppinioSwiper(
                     controller: controller,
