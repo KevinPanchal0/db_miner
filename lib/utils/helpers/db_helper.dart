@@ -32,7 +32,7 @@ fav INTEGER DEFAULT 0
 
         String queryFav = """
         CREATE TABLE IF NOT EXISTS favQuotes(
-quote_id INTEGER, 
+fav_quote_id INTEGER NOT NULL, 
 quote TEXT NOT NULL, 
 author TEXT NOT NULL,
 category TEXT
@@ -108,7 +108,7 @@ category TEXT
   Future<int> addFav({required FavoriteQuoteModel favModel}) async {
     await initDB();
     String query =
-        'INSERT INTO favQuotes(quote_id, quote, author, category) VALUES(?, ?, ?, ?);';
+        'INSERT INTO favQuotes(fav_quote_id, quote, author, category) VALUES(?, ?, ?, ?);';
     List args = [
       favModel.id,
       favModel.quote,
